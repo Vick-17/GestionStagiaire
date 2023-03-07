@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gestion.gestionstagiare.HelloController">
+   <children>
+      <TableView fx:id="tableStagiaire" prefHeight="400.0" prefWidth="301.0">
+        <columns>
+          <TableColumn fx:id="coloneNom" prefWidth="91.20001220703125" text="Nom" />
+          <TableColumn fx:id="colonePrenom" prefWidth="88.79998779296875" text="Prenom" />
+            <TableColumn fx:id="coloneGroupe" prefWidth="120.79998779296875" text="Groupe" />
+        </columns>
+      </TableView>
+      <VBox prefHeight="400.0" prefWidth="298.0">
+         <children>
+            <Label prefHeight="30.0" prefWidth="50.0" text="Nom">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="inputNom" />
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="78.0" text="Prenom">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="inputPrenom" layoutX="10.0" layoutY="28.0" />
+            <HBox prefHeight="31.0" prefWidth="298.0" style="-fx-alignment: center;">
+               <children>
+                  <Button fx:id="btnClear" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#delete" style="-fx-alignment: center;" text="Clear">
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnAjouts" mnemonicParsing="false" onAction="#SatgiairePlusOne" text="Ajouter" />
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="142.0" prefHeight="31.0" prefWidth="298.0" style="-fx-alignment: center;">
+               <children>
+                  <Button fx:id="btnQuit" mnemonicParsing="false" text="fermer" />
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-alignment: center;">
+               <children>
+                  <VBox prefHeight="100.0" prefWidth="178.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="116.0" text="Nombre de groupe" />
+                        <TextField fx:id="nbrGoupe" />
+                        <Label text="Nrde stagiaire dans le groupe" />
+                        <TextField fx:id="nbrStagiaireGroupe" layoutX="10.0" layoutY="28.0" />
+                     </children>
+                  </VBox>
+                  <Button fx:id="btnAlea" mnemonicParsing="false" onAction="#formationGroupe" text="faire des groupe" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</HBox>
